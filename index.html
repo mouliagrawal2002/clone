@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dummy College Info Page</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0044cc;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .college-card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .college-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .college-card h3 {
+            color: #0044cc;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to College Info</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Colleges</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Exams</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- College Card 1 -->
+        <div class="college-card" id="college1">
+            <img src="https://via.placeholder.com/400x200" alt="College 1">
+            <h3>XYZ University</h3>
+            <p>Location: City A</p>
+            <p>Popular Courses: Engineering, Medical</p>
+            <button id="clickButton1">View Details</button>
+        </div>
+
+        <!-- College Card 2 -->
+        <div class="college-card" id="college2">
+            <img src="https://via.placeholder.com/400x200" alt="College 2">
+            <h3>ABC College</h3>
+            <p>Location: City B</p>
+            <p>Popular Courses: Business, Arts</p>
+            <button id="clickButton2">View Details</button>
+        </div>
+
+        <!-- College Card 3 -->
+        <div class="college-card" id="college3">
+            <img src="https://via.placeholder.com/400x200" alt="College 3">
+            <h3>PQR Institute</h3>
+            <p>Location: City C</p>
+            <p>Popular Courses: Computer Science, Law</p>
+            <button id="clickButton3">View Details</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 College Info - <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Event Tracking (Google Analytics) -->
+    <script>
+        // Tracking button clicks as events in Google Analytics
+        document.getElementById('clickButton1').addEventListener('click', function() {
+            gtag('event', 'view_college', {
+                'event_category': 'College Info',
+                'event_label': 'XYZ University',
+                'value': 1
+            });
+        });
+        
+        document.getElementById('clickButton2').addEventListener('click', function() {
+            gtag('event', 'view_college', {
+                'event_category': 'College Info',
+                'event_label': 'ABC College',
+                'value': 1
+            });
+        });
+
+        document.getElementById('clickButton3').addEventListener('click', function() {
+            gtag('event', 'view_college', {
+                'event_category': 'College Info',
+                'event_label': 'PQR Institute',
+                'value': 1
+            });
+        });
+    </script>
+</body>
+</html>
